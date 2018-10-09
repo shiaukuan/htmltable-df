@@ -87,7 +87,7 @@ class Extractor(object):
         if header:
             self.header = header
         data = self._output
-        columns = [r[0] if len(set(r)) == 1 else '_'.join(r).strip().strip('_') for r in
+        columns = [r[0] if len(set(r)) == 1 else '_'.join(r).replace(' ','').strip('_') for r in
                    list(zip(*data[:self.header]))]
         data = pd.DataFrame(data[self.header:], columns=columns)
         data = data.applymap(lambda x: x.strip().replace(',', ''))

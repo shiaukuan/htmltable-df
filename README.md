@@ -143,6 +143,7 @@ pip install htmltable-df
 
 ```python
 from htmltable_df.extractor import Extractor
+#html可以是PyQuery物件或
 extractor = Extractor(html)
 extractor.df()
 ```

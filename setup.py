@@ -8,7 +8,7 @@ from setuptools import setup
 setup(
     name='htmltable-df',
     url='https://github.com/shiaukuan/htmltable-df',
-    version='1.0.0',
+    version='1.0.1',
     author='shiaukuan',
     author_email='kuan60508@gmail.com',
     description='A python library for extracting data from html table',

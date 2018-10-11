@@ -143,7 +143,6 @@ pip install htmltable-df
 
 ```python
 from htmltable_df.extractor import Extractor
-#html可以是PyQuery物件或
 extractor = Extractor(html)
 extractor.df()
 ```
@@ -153,16 +152,16 @@ print out:
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>公司代號</th>
+      <th>公司 代號</th>
       <th>公司名稱</th>
       <th>營業收入_當月營收</th>
       <th>營業收入_上月營收</th>
       <th>營業收入_去年當月營收</th>
-      <th>營業收入_上月比較增減(%)</th>
-      <th>營業收入_去年同月增減(%)</th>
+      <th>營業收入_上月比較 增減(%)</th>
+      <th>營業收入_去年同月 增減(%)</th>
       <th>累計營業收入_當月累計營收</th>
       <th>累計營業收入_去年累計營收</th>
-      <th>累計營業收入_前期比較增減(%)</th>
+      <th>累計營業收入_前期比較 增減(%)</th>
       <th>備註</th>
     </tr>
   </thead>

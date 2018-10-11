@@ -1,9 +1,12 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
+import re
+
 from pyquery import PyQuery as pq, PyQuery
 import pandas as pd
 import os
 import csv
+
 
 class Extractor(object):
     def __init__(self, table, jquery='table', **kwargs):
@@ -87,7 +90,7 @@ class Extractor(object):
         if header:
             self.header = header
         data = self._output
-        columns = [r[0] if len(set(r)) == 1 else '_'.join(r).replace(' ','').strip('_') for r in
+        columns = [r[0] if len(set(r)) == 1 else re.sub('\s', '', '_'.join(r).strip('_')) for r in
                    list(zip(*data[:self.header]))]
         data = pd.DataFrame(data[self.header:], columns=columns)
         data = data.applymap(lambda x: x.strip().replace(',', ''))

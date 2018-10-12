@@ -39,6 +39,8 @@ class Extractor(object):
                 self.header += 1
             else:
                 break
+        if self.header == 0:
+            self.header = 1
 
         for row in self._table('tr').items():
             # record the smallest row_span, so that we know how many rows
